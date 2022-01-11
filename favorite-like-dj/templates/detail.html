@@ -1,0 +1,13 @@
+product detail
+
+
+<h3>{{ product }} </h3>
+
+
+{% if request.user in product.like.all %}
+<a href="{% url 'like_or_unlike'  product.id %}">Dislike</a>
+{% else %}
+<a href="{% url 'like_or_unlike'  product.id %}">like</a>
+{% endif %}
+    
+
